@@ -932,10 +932,7 @@ footer {
             <li><a href="#about">About</a></li>
             <li><a href="#classes">Classes</a></li>
             <li><a href="#coaches">Coaches</a></li>
-            <li><a href="#achievements">Achievements</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#faq">Questions</a></li>
-            <li><a href="#contact">Contact</a></li>
     <label class="switch">
         <input type="checkbox" id="theme-toggle">
         <div class="slider round">
@@ -1500,7 +1497,6 @@ footer {
   // Close menu when any nav link is clicked (mobile friendly)
   document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
-          navLinks.classList.remove('active');
           const icon = hamburger.querySelector('i');
           icon.classList.add('fa-bars');
           icon.classList.remove('fa-times');
