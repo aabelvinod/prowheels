@@ -13,6 +13,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logo.png">
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
@@ -643,12 +644,20 @@ input:checked + .slider .stars {
     color: var(--secondary);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 15px;
-    }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px; /* nice small gap between */
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 180px; /* equal height for all images */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
     .lightbox img {
         max-width: 95%;
         max-height: 80%;
@@ -988,7 +997,7 @@ footer {
             </div>
         </div>
         <div class="enrollment-badge">
-  ENROLLMENT OPEN 2025-26
+  ENROLLMENT OPEN 2026-27
 </div>
 
 <style>
@@ -1380,7 +1389,7 @@ footer {
         <i class="fas fa-envelope"></i>
         <div>
           <h4>Email</h4>
-          <a href="mailto:info@prowheels.com">info@prowheels.com</a>
+         <a href="mailto:lisajacob444@gmail.com">lisajacob444@gmail.com</a>
         </div>
       </div>
 
@@ -1393,26 +1402,30 @@ footer {
     </div>
 
     <!-- Contact Form -->
-    <form id="contact-form">
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
-      </div>
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-
+<form id="contact-form" action="https://formspree.io/f/mkgdvvka" method="POST">
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
   </div>
+
+  <div class="form-group">
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="number">Your Number</label>
+    <input type="text" id="number" name="number" placeholder="Enter your number" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+  </div>
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
 </section>
 
 <footer>
@@ -1454,7 +1467,6 @@ footer {
     </div>
 </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   // ==========================
@@ -1588,18 +1600,7 @@ footer {
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // ==========================
-  // 8. Contact Form
-  // ==========================
-  document.getElementById('contact-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = e.target.email.value.trim();
-      if (!email || !email.includes('@')) {
-          alert('Please enter a valid email address!');
-          return;
-      }
-      alert('Thank you! Your message has been sent. We\'ll contact you soon! 🚀');
-      e.target.reset();
-  });
+
 </script>
 <!-- Floating WhatsApp -->
 <a href="https://wa.me/919447523550?text=Hi%20Prowheels!%20I%20want%20to%20enroll%20my%20child%20in%20skating" 
@@ -1635,19 +1636,6 @@ footer {
   70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
   100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
 }
-</style>
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" id="backTop">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-<style>
-#backTop {
-  position:fixed; bottom:100px; left:30px; width:50px; height:50px;
-  background:var(--secondary); color:#000; border:none; border-radius:50%;
-  font-size:24px; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.3);
-  opacity:0; transition:all 0.4s; z-index:999;
-}
-#backTop.show { opacity:1; bottom:30px; }
 </style>
 
 <script>
