@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -666,14 +667,15 @@ input:checked + .slider .stars {
 
 /* --- Contact (Moderated) --- */
 .contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   background: var(--bg-card);
   padding: 60px;
   border-radius: 20px;
   box-shadow: var(--shadow);
 }
+
 
 .contact-info-box .info-item {
   display: flex;
@@ -697,6 +699,7 @@ input:checked + .slider .stars {
 .contact-info-box a {
   color: var(--text-light);
   transition: color 0.3s ease;
+  color: #fff;
 }
 
 .contact-info-box a:hover {
@@ -743,7 +746,7 @@ input:checked + .slider .stars {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--secondary);
+  border-color:var(--secondary);
   box-shadow: 0 0 0 3px rgba(230, 175, 46, 0.3);
 }
 
@@ -803,7 +806,8 @@ footer {
 
 .footer-col ul li:hover {
   color: #fff;
-  padding-left: 5px;
+  color:var(--secondary);
+  padding-left:5px;
 }
 
 .socials a {
@@ -1140,40 +1144,6 @@ footer {
             </div>
         </div>
     </section>
-    <!-- === BATCH SCHEDULE SECTION – FULLY DARK-MODE COMPATIBLE === -->
-<section id="schedule" style="padding:80px 20px; background:var(--bg-card);">
-  <h2 class="section-title">Batch Schedule 2025-26</h2>
-
-  <div style="overflow-x:auto; border-radius:15px; box-shadow:var(--shadow); max-width:1000px; margin:0 auto;">
-    <table style="width:100%; min-width:600px; border-collapse:collapse; background:var(--bg-body);">
-      <thead>
-        <tr style="background:var(--secondary); color:#000;">
-          <th style="padding:20px; text-align:center; font-weight:700; font-size:1.1rem;">Day</th>
-          <th style="padding:20px; text-align:center; font-weight:700; font-size:1.1rem;">Time</th>
-          <th style="padding:20px; text-align:center; font-weight:700; font-size:1.1rem;">Batch</th>
-          <th style="padding:20px; text-align:center; font-weight:700; font-size:1.1rem;">Age Group</th>
-          <th style="padding:20px; text-align:center; font-weight:700; font-size:1.1rem;">Coach</th>
-        </tr>
-      </thead>
-      <tbody style="text-align:center; color:var(--text-main);">
-        <tr style="background:var(--bg-card);">
-          <td style="padding:18px; font-size:1.05rem;">Saturday & Sunday</td>
-          <td style="padding:18px; font-size:1.05rem;">4:00 – 5:00 PM</td>
-          <td style="padding:18px; font-weight:600;">Beginner</td>
-          <td style="padding:18px;">5–10 years</td>
-          <td style="padding:18px;">Sneha P.</td>
-        </tr>
-        <tr style="background:var(--bg-body);">
-          <td style="padding:18px; font-size:1.05rem;">Saturday & Sunday</td>
-          <td style="padding:18px; font-size:1.05rem;">5:00 – 6:00 PM</td>
-          <td style="padding:18px; font-weight:600;">Intermediate + Professional</td>
-          <td style="padding:18px;">10+ years</td>
-          <td style="padding:18px;">Arjun Nair / Rahul K.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
     <section id="coaches">
         <h2 class="section-title">Meet The Coaches</h2>
         <div class="coaches-grid">
@@ -1381,7 +1351,7 @@ footer {
         <i class="fas fa-phone-alt"></i>
         <div>
           <h4>Call Us</h4>
-          <a href="tel:+919876543210">+91 98765 43210</a>
+          <a href="tel:+919876543210">+91 94475 23550 </a>
         </div>
       </div>
 
@@ -1392,14 +1362,6 @@ footer {
          <a href="mailto:lisajacob444@gmail.com">lisajacob444@gmail.com</a>
         </div>
       </div>
-
-      <iframe 
-        class="map-frame"
-        src="https://www.google.com/maps?q=Thanissery%20Kallada%20Thrissur&output=embed"
-        allowfullscreen="" 
-        loading="lazy">
-      </iframe>
-    </div>
 
     <!-- Contact Form -->
 <form id="contact-form" action="https://formspree.io/f/mkgdvvka" method="POST">
@@ -1672,5 +1634,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 </script>
 </body>
 </html>
-
-
